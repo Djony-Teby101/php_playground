@@ -1,0 +1,46 @@
+Router_web/
+│
+├── index.php (point d'entrée unique)
+├── .htaccess (pour la réécriture d'URL)
+├── config/
+│   └── routes.php (configuration des routes)
+├── src/
+│   ├── Router.php (classe de routage principale)
+│   └── Controllers/
+│       ├── HomeController.php
+│       ├── AboutController.php
+│       ├── ContactController.php
+│       └── BlogController.php
+├── views/
+│   ├── layouts/
+│   │   └── base.php
+│   ├── home/
+│   ├── about/
+│   ├── contact/
+│   └── blog/
+└── public/
+    ├── css/
+    ├── js/
+    └── images/
+
+Comment utiliser le système
+Mettre en place la structure de dossiers comme décrite ci-dessus
+
+Configurer le serveur pour pointer vers le dossier racine
+
+Ajouter une nouvelle route dans config/routes.php
+
+Créer un contrôleur correspondant dans src/Controllers/
+
+Créer une vue dans views/nom-controller/action.php
+
+Exemples d'URL gérées
+/ → HomeController::index()
+
+/a-propos → AboutController::index()
+
+/blog → BlogController::index()
+
+/blog/mon-article → BlogController::show() avec paramètre slug="mon-article"
+
+/blog/categorie/tutoriel → BlogController::categorie() avec paramètre categorie="tutoriel"
