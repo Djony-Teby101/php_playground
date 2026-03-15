@@ -36,5 +36,34 @@ try {
    return $erreur;
 }
 
+// structure conditionnel.
+
+<?php 
+
+// formulaire data.
+// Nettoyer la data.
+// format
+$poste_photo=trim("profile.avatar.png");
+$desciption=trim("lorem ipsum");
+$destination=trim("libreville");
+$montant=trim(htmlspecialchars(15000));
+
+
+
+
+$Status=false;
+
+if(!empty($poste_photo)|| !empty($desciption)|| !empty($destination) || !empty($montant)){
+    // Changer le type de la variable $montant (int).
+    $montant=(int)$montant;
+    // var_dump(gettype($montant));
+    $Status=true;
+    return $Status;
+}else{
+    return $Status;
+}
+
+
+?>
 
 ?>
